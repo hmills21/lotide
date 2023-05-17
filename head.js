@@ -5,6 +5,15 @@ const assertEqual = function(actual, expected) {
     console.log(` 🤡🤡🤡 Assertion Failed: ${actual}!== ${expected}`);
   }
 };
+const head = function (firstItem) {
+  if(firstItem === []) {
+    return undefined;
+  } 
+  return firstItem[0];
+} 
 
-assertEqual("Bootcamp", "Bootcamp");
-assertEqual(-7, 8);
+
+
+assertEqual(head([5,6,7]), 5);
+assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
+// implemented template literals to make the function a bit more clean.
