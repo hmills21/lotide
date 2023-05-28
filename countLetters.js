@@ -38,7 +38,9 @@ const countLetters = function(sentence) {
    //in an array(or an array-like object) seperated by commas or specified seperator string
 
    for (const letter of result){ // looping through each letter of my results
-     if (obj[letter]){ //if the letter is come across more than once:
+     if (obj[letter]){ //if the letter is present in obj, then it will return true and add 1 to the current number. for example:
+      // the first L when run through this function is not present in obj so its false, so it will = 1, if it comes across
+      //that letter again, it will ADD one more onto the existing num
       obj[letter] += 1; // add 1 more to it 
      } else { //  if the loop only sees the letter once:
        obj[letter] = 1; // the letter is equal to 1
